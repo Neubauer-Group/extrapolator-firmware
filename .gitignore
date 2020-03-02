@@ -1,0 +1,10 @@
+*
+!.gitignore
+!*.vhd
+!*.ip
+!*.txt
+!*.sh
+!*.tcl
+!*.do
+!*.qpf
+!/mentor/
