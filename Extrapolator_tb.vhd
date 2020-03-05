@@ -61,6 +61,7 @@ COMPONENT Extrapolator_Main
 			SectorID_13L_from_HBM : in STD_LOGIC_VECTOR(SectorID_13L_Length-1 downto 0);
 			Constants_Ready_from_HBM : in STD_LOGIC;
 
+			ssid_out: out ssid_array;
 			halt_in:		in	STD_LOGIC
 		);
 END COMPONENT ;
@@ -74,7 +75,7 @@ SIGNAL valid_data	: std_logic := '0';
 SIGNAL ready   	: std_logic;
 SIGNAL halt_out   : std_logic;
 SIGNAL halt_in   	: std_logic := '0';
-
+SIGNAL ssid_out : ssid_array;
 
 SIGNAL TV_index	: integer := 0;
 SIGNAL word_index	: integer := 0;
@@ -129,7 +130,7 @@ Extrapolator : Extrapolator_Main
 		SectorID_13L_from_HBM => SectorID_13L_from_HBM,
 		Constants_Ready_from_HBM => Constants_Ready_from_HBM,
 
-
+		ssid_out => ssid_out,
 		halt_in => halt_in
 	);
 

@@ -43,6 +43,14 @@ constant TWO_float : std_logic_vector(31 downto 0) := X"40000000";
 constant ModuleID_Length : integer := 18;
 type module_array is array (N_Layers_Extrapolated-1 downto 0) of std_logic_vector(ModuleID_Length-1 downto 0);
 
+constant SSID_Length : integer := 16;
+constant SSID_pix_neighborhood_size : integer := 9;
+constant SSID_strip_neighborhood_size : integer := 3;
+constant SSID_total : integer := SSID_pix_neighborhood_size*N_PIX_Layers_Extrapolated + SSID_strip_neighborhood_size*N_STRIP_Layers_Extrapolated;
+type ssid_pix_neighborhood_array is array (SSID_pix_neighborhood_size-1 downto 0) of std_logic_vector(SSID_Length-1 downto 0);
+type ssid_strip_neighborhood_array is array (SSID_strip_neighborhood_size-1 downto 0) of std_logic_vector(SSID_Length-1 downto 0);
+type ssid_array is array (SSID_total-1 downto 0) of std_logic_vector(SSID_Length-1 downto 0);
+
 
 -- Data Blocks
 constant Header_Length : integer := 6;
@@ -84,6 +92,9 @@ constant Strip_Idx_Bit : integer := 4;
 
 
 end package Extrapolator_Package;
+
+
+
 
 
 package body Extrapolator_Package is

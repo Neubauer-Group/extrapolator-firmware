@@ -19,6 +19,8 @@ echo "vcom -work work \$QSYS_SIMDIR/Extrapolator_Constants_Loader.vhd" >> run_si
 echo "vcom -work work \$QSYS_SIMDIR/Extrapolator_Matrix_Calculation.vhd" >> run_simulation.do
 echo "vcom -work work \$QSYS_SIMDIR/Extrapolator_Row_Solver.vhd" >> run_simulation.do
 echo "vcom -work work \$QSYS_SIMDIR/Extrapolator_SSMap.vhd" >> run_simulation.do
+echo "vcom -work work \$QSYS_SIMDIR/Extrapolator_SSID_Converter.vhd" >> run_simulation.do
+echo "vcom -work work \$QSYS_SIMDIR/Extrapolator_SSID_Neighborhood.vhd" >> run_simulation.do
 
 
 echo "set TOP_LEVEL_NAME extrapolator_tb" >> run_simulation.do

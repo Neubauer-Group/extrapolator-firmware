@@ -26,6 +26,11 @@
 #     mult_accum.mult_accum
 #     fifo_float32.fifo_float32
 #     truncation.truncation
+#     SSID_Converter_RAM.SSID_Converter_RAM
+#     fixed_mult.fixed_mult
+#     mult_add_fixed.mult_add_fixed
+#     module_id_fifo.module_id_fifo
+#     ssid_fifo.ssid_fifo
 # 
 # Intel recommends that you source this Quartus-generated IP simulation
 # script from your own customized top-level script, and avoid editing this
@@ -91,7 +96,7 @@
 # 
 # IP SIMULATION SCRIPT
 # ----------------------------------------
-# ACDS 19.3 222 linux 2020.03.02.13:45:16
+# ACDS 19.3 222 linux 2020.03.04.20:19:44
 
 # ----------------------------------------
 # Initialize variables
@@ -102,7 +107,7 @@ if ![info exists SYSTEM_INSTANCE_NAME] {
 }
 
 if ![info exists TOP_LEVEL_NAME] { 
-  set TOP_LEVEL_NAME "truncation.truncation"
+  set TOP_LEVEL_NAME "ssid_fifo.ssid_fifo"
 }
 
 if ![info exists QSYS_SIMDIR] { 

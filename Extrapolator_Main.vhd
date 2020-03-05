@@ -30,6 +30,8 @@ port (
 		SectorID_13L_from_HBM : in STD_LOGIC_VECTOR(SectorID_13L_Length-1 downto 0);
 		Constants_Ready_from_HBM : in STD_LOGIC;
 
+		--Combine Interface
+		ssid_out: out ssid_array;
 		halt_in:		in	STD_LOGIC
 );
 end Extrapolator_Main;
@@ -143,6 +145,7 @@ port (
 		valid_exp_result : in STD_LOGIC;
 		halt_out : out STD_LOGIC;
 
+		ssid_out: out ssid_array;
 		halt_in:		in	STD_LOGIC
 );
 end component;
@@ -281,6 +284,7 @@ SSmap : Extrapolator_SSMap
 		valid_exp_result => valid_exp_result,
 		halt_out => halt_from_SSMap,
 
+		ssid_out => ssid_out,
 		halt_in => halt_in
 	);
 
